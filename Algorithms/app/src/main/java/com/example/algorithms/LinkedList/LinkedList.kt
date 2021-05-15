@@ -82,4 +82,56 @@ class LinkedList<T> {
         return newNode
     }
 
+    /*
+        Removes the value at the front of the list
+     */
+    fun pop(): T? {
+        if (!isEmpty()) {
+            size--
+        }
+        val result = head?.value
+        head = head?.next
+        if (isEmpty()) {
+            tail = null
+        }
+        return result
+    }
+
+    /*
+        Removes the value at the end of the list
+     */
+    fun removeLast(): T? {
+        val head = head ?: return null
+        if (head.next == null) return pop()
+        size--
+
+        var prev = head
+        var current = head
+        var next = current.next
+
+        while (next != null) {
+            prev = current
+            current = next
+            next = current.next
+        }
+        prev.next = null
+        tail = prev
+        return current.value
+    }
+
+    /*
+        Removes a value anywhere in the list
+     */
+    fun removeAfter(node: Node<T>): T? {
+        val result = node.next?.value
+        if (node.next == tail) {
+            tail = node
+        }
+        if (node.next != null) {
+            size--
+        }
+        node.next = node.next?.next
+        return result
+    }
+
 }
