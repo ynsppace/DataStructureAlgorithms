@@ -19,8 +19,11 @@ fun main(args: Array<String>) {
     println(linkedList)
     val ch1 = Challenge<Int>()
     ch1.printInReverse(linkedList.getNode(0))
-
-
+    println()
+    println("-------------------------TEST PRINT THE MIDDLE ITEM-----------------------------------------------------------------------------")
+    ch1.printMiddleItem(linkedList)
+    println()
+    println("-------------------------MERGE TWO LINKED LISTS---------------------------------------------------------------------------------")
 }
 
 

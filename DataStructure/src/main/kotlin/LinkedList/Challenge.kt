@@ -6,7 +6,7 @@ class Challenge<T> {
      */
 
     fun printInReverse(node: Node<T>?) {
-        if (node== null) {
+        if (node == null) {
             return
         }
         printInReverse(node?.next)
@@ -14,5 +14,34 @@ class Challenge<T> {
             print("->")
         }
         print(node?.value.toString())
+    }
+
+    /*
+        Print the middle node value
+     */
+
+    fun printMiddleItem(list: LinkedList<T>) {
+        if (list == null || list.isEmpty()) {
+            println("List is Empty!")
+            return
+        }
+        val middlePos = list.size / 2
+        println(list.getNode(middlePos)?.value.toString())
+
+    }
+
+    /*
+        Merge Two LinkedLists
+     */
+
+    fun mergeLinkedLists(list1: LinkedList<T>, list2: LinkedList<T>): LinkedList<T> {
+        if (list1.isEmpty()) {
+            return list2
+        } else if (list2.isEmpty()) {
+            return list1
+        }
+        val list3 = LinkedList<T>()
+
+        return list3
     }
 }
