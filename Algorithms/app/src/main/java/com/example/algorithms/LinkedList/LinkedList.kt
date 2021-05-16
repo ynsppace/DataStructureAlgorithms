@@ -3,10 +3,22 @@ package com.example.algorithms.LinkedList
 /*
     Represent a Linked List
  */
-class LinkedList<T> {
+class LinkedList<T> : Iterable<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
-    private var size = 0
+
+    /*
+        Makes the size visible of outside the class, but the setter is private
+     */
+    var size = 0
+        private set
+
+    /*
+        Creates a instance of iterator
+     */
+    override fun iterator(): Iterator<T> {
+        return LinkedListIterator(this)
+    }
 
     /*
         Verify if a list contains elements
