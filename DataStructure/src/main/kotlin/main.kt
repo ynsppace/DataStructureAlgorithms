@@ -1,4 +1,5 @@
 import LinkedList.*
+import Queues.Queue
 import StackData.Stack
 
 /*
@@ -28,7 +29,7 @@ fun main(args: Array<String>) {
     println()
     println()
     println("-------------------------TESTING A STACK---------------------------------------------------------------------------------")
-    val stack=Stack<Int>()
+    val stack = Stack<Int>()
     stack.push(1)
     stack.push(2)
     stack.push(4)
@@ -39,6 +40,40 @@ fun main(args: Array<String>) {
     println("--------------REMOVING A ELEMENT------------------")
     stack.pop()
     println(stack)
+    println()
+    println("-------------------------TESTING A QUEUE---------------------------------------------------------------------------------")
+    val queue = Queue<Int>()
+    queue.enqueue(2)
+    queue.enqueue(3)
+    queue.enqueue(7)
+    queue.enqueue(9)
+    queue.enqueue(4)
+    queue.enqueue(5)
+    println(queue)
+    queue.dequeue()
+    println(queue)
+
+    println()
+    println("-------------------------TESTING A QUEUE OF STRINGS---------------------------------------------------------------------------------")
+    val queue2=Queue<String>()
+    queue2.enqueue("D")
+    queue2.enqueue("S")
+    queue2.enqueue("A")
+    queue2.enqueue("L")
+    queue2.enqueue("G")
+    println(queue2)
+    queue2.enqueue("R")
+    queue2.enqueue("O")
+    queue2.dequeue()
+    println(queue2)
+    queue2.enqueue("C")
+    queue2.dequeue()
+    queue2.dequeue()
+    queue2.enqueue("K")
+    println(queue2)
+
+
+
 
 
 
