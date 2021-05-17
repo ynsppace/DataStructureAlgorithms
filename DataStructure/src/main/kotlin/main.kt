@@ -1,4 +1,5 @@
 import LinkedList.*
+import StackData.Stack
 
 /*
     Testing a LinkedList methods
@@ -24,6 +25,23 @@ fun main(args: Array<String>) {
     ch1.printMiddleItem(linkedList)
     println()
     println("-------------------------MERGE TWO LINKED LISTS---------------------------------------------------------------------------------")
+    println()
+    println()
+    println("-------------------------TESTING A STACK---------------------------------------------------------------------------------")
+    val stack=Stack<Int>()
+    stack.push(1)
+    stack.push(2)
+    stack.push(4)
+    stack.push(6)
+    stack.push(7)
+    stack.push(9)
+    println(stack)
+    println("--------------REMOVING A ELEMENT------------------")
+    stack.pop()
+    println(stack)
+
+
+
 }
 
 

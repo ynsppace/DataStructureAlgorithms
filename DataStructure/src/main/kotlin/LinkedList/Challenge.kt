@@ -41,7 +41,8 @@ class Challenge<T> {
             return list1
         }
         val list3 = LinkedList<T>()
-
+        var it=0
+        //NOT IMPLEMENTED
         return list3
     }
 }
