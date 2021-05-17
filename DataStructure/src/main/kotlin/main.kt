@@ -55,7 +55,7 @@ fun main(args: Array<String>) {
 
     println()
     println("-------------------------TESTING A QUEUE OF STRINGS---------------------------------------------------------------------------------")
-    val queue2=Queue<String>()
+    val queue2 = Queue<String>()
     queue2.enqueue("D")
     queue2.enqueue("S")
     queue2.enqueue("A")
@@ -72,9 +72,10 @@ fun main(args: Array<String>) {
     queue2.enqueue("K")
     println(queue2)
 
-
-
-
+    println()
+    println("-------------------------TESTING A REVERSE QUEUE METHOD---------------------------------------------------------------------------------")
+    val ch3 = Queues.Challenge<String>()
+    println(ch3.reverse(queue2))
 
 
 }
