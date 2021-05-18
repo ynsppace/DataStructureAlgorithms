@@ -1,6 +1,8 @@
 import LinkedList.*
 import Queues.Queue
 import StackData.Stack
+import Tree.Node
+import Tree.Tree
 
 /*
     Testing a LinkedList methods
@@ -76,6 +78,16 @@ fun main(args: Array<String>) {
     println("-------------------------TESTING A REVERSE QUEUE METHOD---------------------------------------------------------------------------------")
     val ch3 = Queues.Challenge<String>()
     println(ch3.reverse(queue2))
+
+    println()
+    println("-------------------------TESTING A TREE---------------------------------------------------------------------------------")
+    val hot = Node("Hot")
+    val cold = Node("Cold")
+    val beverages = Node("Beverages")
+    val tree = Tree(beverages)
+    tree.add(hot)
+    tree.add(cold)
+    println(tree)
 
 
 }
